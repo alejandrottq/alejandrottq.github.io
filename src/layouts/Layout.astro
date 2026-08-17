@@ -1,0 +1,105 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Alejandro Ttupa Quispe | Desarrollo Web, SEO & ABLY PERU",
+  description = "Portafolio profesional de Alejandro Ttupa Quispe. Especialista en desarrollo web ultrarrápido (Astro/Next.js), posicionamiento SEO técnico, e-commerce y crecimiento digital en Cusco y Perú con el respaldo de ABLY PERU.",
+  image = "https://ably.pe/images/alejandrottq-ably-peru.png"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Alejandro Ttupa Quispe" />
+    <meta name="keywords" content="Alejandro Ttupa Quispe, ABLY PERU, desarrollo web cusco, seo cusco, astro js, next js, diseño web peru, posicionamiento google, wordpress cusco" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="Alejandro Ttupa Quispe" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://alejandrottq.github.io/#person",
+            "name": "Alejandro Ttupa Quispe",
+            "jobTitle": "Web Developer & SEO Specialist",
+            "url": "https://alejandrottq.github.io/",
+            "email": "alejandrottq@gmail.com",
+            "sameAs": [
+              "https://github.com/alejandrottq",
+              "https://linkedin.com/in/alejandrottq",
+              "https://instagram.com/alejandrottq",
+              "https://facebook.com/alejandrottqpe",
+              "https://ably.pe"
+            ],
+            "worksFor": {
+              "@type": "Organization",
+              "name": "ABLY PERU E.I.R.L.",
+              "url": "https://ably.pe"
+            }
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://ably.pe/#business",
+            "name": "ABLY PERU",
+            "legalName": "ABLY PERU E.I.R.L.",
+            "url": "https://ably.pe",
+            "logo": "https://ably.pe/images/logo.svg",
+            "description": "Agencia digital especializada en diseño web, posicionamiento SEO, Google Ads y Cloud Hosting en Cusco & Perú.",
+            "telephone": "+51 935 381 848",
+            "email": "alejandrottq@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Cusco",
+              "addressRegion": "Cusco",
+              "addressCountry": "PE"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="font-['Inter',sans-serif] bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import profileImage from '../assets/images/alejandrottq-ably-peru.avif';
+---
+
+<section id="sobre-mi" class="py-16 md:py-24 bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left Column: Personal Story -->
+      <div class="lg:col-span-6 space-y-6">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3.5 py-1.5 rounded-full border border-brand-200">
+          Un poco sobre mí
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug">
+          ¡Hola! Soy Alejandro Ttupa Quispe
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          Me apasiona el desarrollo web y la tecnología. Mi objetivo principal es ayudar a empresas, hoteles y agencias de turismo a construir una presencia en internet moderna, rápida y que realmente genere resultados.
+        </p>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          Trabajo utilizando tecnologías de vanguardia como Astro, Next.js y WordPress optimizado. Además, cuento con el respaldo técnico y operativo de <strong class="text-slate-900">ABLY PERU</strong>, lo que me permite brindarte la máxima tranquilidad y garantía en cada proyecto que realizamos juntos.
+        </p>
+
+        <!-- Personal Values -->
+        <div class="space-y-4 pt-2 text-sm text-slate-700">
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shrink-0 mt-0.5">✓</div>
+            <div>
+              <strong class="text-slate-900 block">Atención cercana y directa:</strong>
+              <span>Tratas directamente conmigo. Me involucro de principio a fin en cada detalle de tu proyecto.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold shrink-0 mt-0.5">✓</div>
+            <div>
+              <strong class="text-slate-900 block">Enfoque en Cusco y turismo:</strong>
+              <span>Conozco muy bien las necesidades de los negocios locales y agencias de viajes que buscan captar clientes internacionales.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold shrink-0 mt-0.5">✓</div>
+            <div>
+              <strong class="text-slate-900 block">Respaldo formal y continuo:</strong>
+              <span>Facturación oficial (RUC / E.I.R.L.), soporte a largo plazo y la seguridad que tu negocio merece.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Personal Photo Showcase using Astro <Image /> component -->
+      <div class="lg:col-span-6 flex justify-center">
+        <div class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 w-full max-w-md">
+          <Image 
+            src={profileImage} 
+            alt="Alejandro Ttupa Quispe - Desarrollador Web y Especialista SEO" 
+            width={600}
+            height={700}
+            class="w-full h-auto object-cover max-h-[500px]"
+            loading="lazy"
+          />
+          <div class="p-6 bg-slate-900 text-white space-y-1.5">
+            <div class="flex items-center justify-between text-xs text-brand-400 font-bold">
+              <span>ALEJANDRO TTUPA QUISPE</span>
+              <span>Cusco, Perú</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Desarrollador Web & Consultor SEO</h3>
+            <p class="text-xs text-slate-300">
+              Creando proyectos digitales con pasión, velocidad y respaldo de ABLY PERU.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

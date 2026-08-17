@@ -1,0 +1,41 @@
+---
+const techStack = [
+  { name: "Astro", role: "Static & Island Architecture", detail: "Carga ultrarrápida sin JS innecesario" },
+  { name: "Next.js", role: "Fullstack App Router", detail: "Server Components & Carga de alto tráfico" },
+  { name: "React", role: "UI Component Library", detail: "Interfaces reactivas de usuario" },
+  { name: "Tailwind CSS", role: "Design System & Utility CSS", detail: "Diseños minimalistas y responsive" },
+  { name: "TypeScript", role: "Type-Safe Code", detail: "Arquitectura robusta sin errores en ejecución" },
+  { name: "WordPress", role: "CMS Gutenberg Nativo", detail: "Autoadministrable sin plugins pesados" },
+  { name: "WooCommerce", role: "E-Commerce", detail: "Tiendas y pasarelas de cobro directo" },
+  { name: "Google SEO & Analytics", role: "Arquitectura SEO", detail: "Schema.org, sitemaps y medición GA4" }
+];
+---
+
+<section id="tecnologias" class="py-16 md:py-24 bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div class="max-w-3xl space-y-4">
+      <span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+        Stack Tecnológico
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Herramientas de nivel profesional para desarrollo de vanguardia
+      </h2>
+      <p class="text-slate-600 text-base sm:text-lg">
+        Selecciono cada herramienta en función de las necesidades específicas de tu proyecto, asegurando código limpio, máxima mantenibilidad y alto rendimiento.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {techStack.map(tech => (
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-2 hover:border-brand-500 hover:bg-white hover:shadow-md transition-all">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-slate-900">{tech.name}</h3>
+            <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+          </div>
+          <p class="text-xs font-semibold text-brand-600">{tech.role}</p>
+          <p class="text-xs text-slate-600 leading-snug">{tech.detail}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

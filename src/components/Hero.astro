@@ -1,0 +1,173 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/images/hero-ecosystem.jpg';
+---
+
+<section id="inicio" class="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between bg-slate-950 text-white overflow-hidden border-b border-slate-900 py-12 lg:py-16">
+  <!-- Decorative grid background with subtle radial glow -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none"></div>
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Animated Glowing Background Scanlines -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+    <!-- Horizontal animated lines -->
+    <div class="absolute top-[25%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-400/50 to-transparent animate-line-h1"></div>
+    <div class="absolute top-[65%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent animate-line-h2"></div>
+    <div class="absolute top-[85%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-sky-400/30 to-transparent animate-line-h3"></div>
+
+    <!-- Vertical animated lines -->
+    <div class="absolute top-0 left-[20%] w-[1px] h-full bg-gradient-to-b from-transparent via-brand-400/40 to-transparent animate-line-v1"></div>
+    <div class="absolute top-0 left-[50%] w-[1px] h-full bg-gradient-to-b from-transparent via-emerald-400/30 to-transparent animate-line-v2"></div>
+    <div class="absolute top-0 left-[80%] w-[1px] h-full bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent animate-line-v3"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-auto w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <!-- Left Content Column -->
+      <div class="lg:col-span-7 space-y-6 lg:space-y-8 text-left">
+        <!-- Personal Greeting Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs sm:text-sm font-semibold backdrop-blur-xs">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>👋 ¡Hola! Soy Alejandro Ttupa Quispe</span>
+        </div>
+
+        <!-- H1 Fullscreen Heading -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+          Desarrollo sitios web ultrarrápidos que impulsan tu negocio
+          <span class="block bg-gradient-to-r from-brand-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent mt-3 text-3xl sm:text-5xl lg:text-6xl font-extrabold">
+            Soluciones web pensadas para conectar y vender
+          </span>
+        </h1>
+
+        <!-- Subtitle in 1st Person -->
+        <p class="text-base sm:text-xl text-slate-300 max-w-2xl font-normal leading-relaxed">
+          Me dedico a crear páginas web de alto rendimiento (Astro / Next.js), posicionamiento SEO estratégico en Google y motores de reserva integrados a WhatsApp para agencias de viajes, hoteles y proyectos en Cusco y Perú.
+        </p>
+
+        <!-- Personal CTAs -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+          <a
+            href="https://wa.me/51935381848?text=Hola%20Alejandro,%20vi%20tu%20sitio%20web%20y%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conversar con Alejandro Ttupa por WhatsApp"
+            class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base sm:text-lg py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-emerald-900/40 flex items-center justify-center gap-3 active:scale-95"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            <span>Conversar directamente por WhatsApp</span>
+          </a>
+
+          <a
+            href="#servicios"
+            aria-label="Ir a la sección de servicios"
+            class="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-base sm:text-lg py-4 px-7 rounded-xl transition-all flex items-center justify-center gap-2"
+          >
+            <span>Ver lo que hago</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Personal Values / Metric Badges -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/80 text-xs sm:text-sm text-slate-300">
+          <div>
+            <span class="text-2xl font-extrabold text-white block">90-100</span>
+            <span class="text-xs text-slate-400 font-medium">PageSpeed Garantizado</span>
+          </div>
+
+          <div>
+            <span class="text-2xl font-extrabold text-emerald-400 block">Top Google</span>
+            <span class="text-xs text-slate-400 font-medium">Posicionamiento Orgánico</span>
+          </div>
+
+          <div>
+            <span class="text-2xl font-extrabold text-brand-400 block">USD ($)</span>
+            <span class="text-xs text-slate-400 font-medium">Reservas por WhatsApp</span>
+          </div>
+
+          <div>
+            <span class="text-2xl font-extrabold text-sky-400 block">ABLY PERU</span>
+            <span class="text-xs text-slate-400 font-medium">Garantía & Soporte</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Showcase using Astro <Image /> component -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-full max-w-xl group">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-500 to-emerald-500 opacity-30 blur-xl group-hover:opacity-50 transition duration-300"></div>
+          <div class="relative bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl space-y-3 p-3">
+            <Image 
+              src={heroImage} 
+              alt="Ecosistema digital de desarrollo web, SEO y analítica de conversión" 
+              width={800}
+              height={450}
+              class="w-full h-auto rounded-xl object-cover shadow-inner"
+              loading="eager"
+            />
+            <div class="p-4 bg-slate-950/90 rounded-xl space-y-1.5">
+              <div class="flex items-center justify-between text-xs font-extrabold text-slate-200">
+                <span>Mi Enfoque de Desarrollo Web</span>
+                <span class="text-emerald-400 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Alto Rendimiento
+                </span>
+              </div>
+              <p class="text-xs text-slate-400">
+                Creo sitios web diseñados a medida, con código limpio y sin sobrecargas para que tus clientes tengan una experiencia fluida.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="relative z-10 pt-6 pb-2 text-center">
+    <a href="#sobre-mi" aria-label="Desplazarse hacia abajo a la sección sobre mí" class="inline-flex flex-col items-center gap-1.5 text-slate-400 hover:text-brand-400 transition-colors group">
+      <span class="text-xs font-semibold uppercase tracking-widest">Conóceme Más</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 animate-bounce group-hover:text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7-7-7" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+<style>
+  @keyframes scanLineH {
+    0% { transform: translateY(-50vh); opacity: 0; }
+    20% { opacity: 0.6; }
+    80% { opacity: 0.6; }
+    100% { transform: translateY(50vh); opacity: 0; }
+  }
+
+  @keyframes scanLineV {
+    0% { transform: translateX(-50vw); opacity: 0; }
+    20% { opacity: 0.6; }
+    80% { opacity: 0.6; }
+    100% { transform: translateX(50vw); opacity: 0; }
+  }
+
+  .animate-line-h1 {
+    animation: scanLineH 9s ease-in-out infinite;
+  }
+  .animate-line-h2 {
+    animation: scanLineH 13s ease-in-out 3s infinite;
+  }
+  .animate-line-h3 {
+    animation: scanLineH 11s ease-in-out 6s infinite;
+  }
+
+  .animate-line-v1 {
+    animation: scanLineV 10s ease-in-out 1.5s infinite;
+  }
+  .animate-line-v2 {
+    animation: scanLineV 14s ease-in-out 4.5s infinite;
+  }
+  .animate-line-v3 {
+    animation: scanLineV 12s ease-in-out 7s infinite;
+  }
+</style>

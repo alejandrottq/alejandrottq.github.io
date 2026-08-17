@@ -1,0 +1,97 @@
+---
+---
+
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Brand / Personal Identity -->
+    <a href="#inicio" aria-label="Alejandro Ttupa - Ir al inicio" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1">
+      <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-extrabold text-xl shadow-sm group-hover:bg-brand-600 transition-colors">
+        AT
+      </div>
+      <div class="flex flex-col">
+        <span class="font-extrabold text-slate-900 text-base leading-tight tracking-tight">Alejandro Ttupa</span>
+        <span class="text-xs font-semibold text-brand-600 flex items-center gap-1">
+          <span>Desarrollador Web</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-1 text-sm font-semibold text-slate-700">
+      <a href="#inicio" class="px-3.5 py-2 rounded-lg hover:text-brand-600 hover:bg-slate-100/80 transition-all">Inicio</a>
+      <a href="#sobre-mi" class="px-3.5 py-2 rounded-lg hover:text-brand-600 hover:bg-slate-100/80 transition-all">Sobre Mí</a>
+      <a href="#servicios" class="px-3.5 py-2 rounded-lg hover:text-brand-600 hover:bg-slate-100/80 transition-all">Mis Servicios</a>
+      <a href="#proyectos" class="px-3.5 py-2 rounded-lg hover:text-brand-600 hover:bg-slate-100/80 transition-all">Mis Proyectos</a>
+      <a href="#tecnologias" class="px-3.5 py-2 rounded-lg hover:text-brand-600 hover:bg-slate-100/80 transition-all">Mi Stack</a>
+      <a href="#ably-peru" class="px-3.5 py-2 rounded-lg hover:text-brand-600 hover:bg-slate-100/80 transition-all">ABLY PERU</a>
+      <a href="#contacto" class="px-3.5 py-2 rounded-lg hover:text-brand-600 hover:bg-slate-100/80 transition-all">Contacto</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Animated Eye-Catching WhatsApp CTA Button -->
+      <a 
+        href="https://wa.me/51935381848?text=Hola%20Alejandro,%20vi%20tu%20sitio%20web%20y%20me%20gustar%C3%ADa%20conversar%20contigo"
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Contactar a Alejandro Ttupa por WhatsApp"
+        class="relative group inline-flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold py-2.5 px-4 rounded-xl transition-all shadow-md hover:shadow-emerald-600/30 active:scale-95"
+      >
+        <!-- Glowing Pulse Aura -->
+        <span class="absolute -inset-0.5 rounded-xl bg-emerald-400 opacity-40 animate-pulse group-hover:opacity-75 transition duration-300"></span>
+
+        <!-- Live Status Indicator Ring -->
+        <span class="relative flex h-2.5 w-2.5 shrink-0">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-80"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+        </span>
+
+        <!-- Icon with hover rotation -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="relative w-4 h-4 text-white group-hover:rotate-12 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+
+        <span class="relative hidden sm:inline">Hablemos por WhatsApp</span>
+        <span class="relative sm:hidden">WhatsApp</span>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button 
+        id="mobile-menu-btn" 
+        aria-label="Abrir menú de navegación" 
+        class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2">
+    <a href="#inicio" class="block px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100">Inicio</a>
+    <a href="#sobre-mi" class="block px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100">Sobre Mí</a>
+    <a href="#servicios" class="block px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100">Mis Servicios</a>
+    <a href="#proyectos" class="block px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100">Mis Proyectos</a>
+    <a href="#tecnologias" class="block px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100">Mi Stack</a>
+    <a href="#ably-peru" class="block px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100">ABLY PERU</a>
+    <a href="#contacto" class="block px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100">Contacto</a>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>
